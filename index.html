@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushi Juneja</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a class="logo" href="index.html">Khushi Juneja</a>
+      <button class="nav-toggle" aria-label="open navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playground.html">Playground</a></li>
+        <li><a href="notes.html">Notes</a></li>
+      </ul>
+    </nav>
+    <button id="vibe-toggle" class="vibe-toggle" aria-label="toggle vibe">✨</button>
+  </header>
 
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h1>Hey, I’m Khushi.</h1>
+    <p class="tagline">I build, write, and play with systems—whether in code, cardboard, or conversation.</p>
+    <p class="rotating-subtitle" id="subtitle">Forever prototyping.</p>
+  </section>
+
+  <!-- In the Spotlight -->
+  <section class="spotlight">
+    <h2>In the Spotlight</h2>
+    <div class="projects">
+      <article class="project-card" id="odd-toys">
+        <h3>Odd Toys <span>🧩</span></h3>
+        <p>Playful tools for curious minds.</p>
+        <a class="project-link" href="playground.html#odd-toys">Explore →</a>
+      </article>
+      <article class="project-card" id="learning-lab">
+        <h3>Learning Lab <span>🔬</span></h3>
+        <p>Experiments in education design.</p>
+        <a class="project-link" href="playground.html#learning-lab">Explore →</a>
+      </article>
+      <article class="project-card" id="side-quests">
+        <h3>Side Quests <span>🎮</span></h3>
+        <p>Tiny games with big feelings.</p>
+        <a class="project-link" href="playground.html#side-quests">Explore →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Meet Me -->
+  <section class="meet-me">
+    <h2>Meet Me</h2>
+    <p>Hello! I’m Khushi, a playful systems thinker who believes in making messy ideas tangible. If it can be prototyped, I’ve probably tried it.</p>
+    <ul class="beliefs">
+      <li>Card games are sacred.</li>
+      <li>Curiosity &gt; credentials.</li>
+      <li>Everything is a prototype.</li>
+    </ul>
+    <div class="badges">
+      <span class="badge">🎲 Game Designer</span>
+      <span class="badge">🧠 EdTech Researcher</span>
+      <span class="badge">📨 Substack Writer</span>
+      <span class="badge">🔨 Tinkerer</span>
+    </div>
+  </section>
+
+  <!-- Contact Me -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Thinking about a project? Or just vibing with the vibe? Say hi.</p>
+    <form class="contact-form">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <button type="submit" title="Sending this might change your life.">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="social">
+      <a href="mailto:placeholder@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+    <p class="credits">Made with sticky notes, chai, and chaos.</p>
+  </footer>
+
+  <!-- You found one! There are 2 more... -->
+
+  <script src="script.js"></script>
+</body>
+</html>
