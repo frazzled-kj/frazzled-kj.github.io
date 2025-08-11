@@ -1,109 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khushi Juneja</title>
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Top Navigation Bar -->
-  <header class="site-header">
-    <nav class="nav-bar">
-      <a class="logo" href="index.html">Khushi Juneja</a>
-      <button class="nav-toggle" aria-label="open navigation">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="playground.html">Playground</a></li>
-        <li><a href="notes.html">Notes</a></li>
-      </ul>
-    </nav>
-    <button id="vibe-toggle" class="vibe-toggle" aria-label="toggle vibe">✨</button>
+<body class="theme-default">
+  <button id="vibe-toggle" class="vibe-toggle" aria-label="toggle vibe">✨ toggle vibe</button>
+
+  <header class="intro">
+    <h1>hey, i’m khushi.</h1>
+    <p class="devanagari">ख़ुशी (khushi) — Hindi: happiness</p>
+    <p class="intro-line">Products, puzzles, and playful systems—built with research, rigor, and a little mischief.</p>
+    <p id="title-rotator" class="rotating-title" aria-live="polite"></p>
   </header>
 
-  <!-- Welcome Section -->
-  <section class="welcome">
-    <h1>Hey, I’m Khushi.</h1>
-    <p class="tagline">I build, write, and play with systems—whether in code, cardboard, or conversation.</p>
-    <p class="rotating-subtitle" id="subtitle">Forever prototyping.</p>
-  </section>
+  <main>
+    <section class="substack" aria-labelledby="substack-label">
+      <h2 id="substack-label" class="visually-hidden">Substack</h2>
+      <div id="substack-cards" class="substack-cards"></div>
+    </section>
 
-  <!-- In the Spotlight -->
-  <section class="spotlight">
-    <h2>In the Spotlight</h2>
-    <div class="projects">
-      <article class="project-card" id="odd-toys">
-        <h3>Odd Toys <span>🧩</span></h3>
-        <p>Playful tools for curious minds.</p>
-        <a class="project-link" href="playground.html#odd-toys">Explore →</a>
-      </article>
-      <article class="project-card" id="learning-lab">
-        <h3>Learning Lab <span>🔬</span></h3>
-        <p>Experiments in education design.</p>
-        <a class="project-link" href="playground.html#learning-lab">Explore →</a>
-      </article>
-      <article class="project-card" id="side-quests">
-        <h3>Side Quests <span>🎮</span></h3>
-        <p>Tiny games with big feelings.</p>
-        <a class="project-link" href="playground.html#side-quests">Explore →</a>
-      </article>
-    </div>
-  </section>
+    <section class="projects-section" aria-labelledby="projects-label">
+      <h2 id="projects-label">projects</h2>
+      <div class="projects-grid">
+        <button class="project-card" data-title="Project One">
+          <span class="project-title">Project One</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Two">
+          <span class="project-title">Project Two</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Three">
+          <span class="project-title">Project Three</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Four">
+          <span class="project-title">Project Four</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Five">
+          <span class="project-title">Project Five</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Six">
+          <span class="project-title">Project Six</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Seven">
+          <span class="project-title">Project Seven</span>
+          <span class="project-open">Click to open</span>
+        </button>
+        <button class="project-card" data-title="Project Eight">
+          <span class="project-title">Project Eight</span>
+          <span class="project-open">Click to open</span>
+        </button>
+      </div>
+      <p class="view-more"><a href="playground.html">View more →</a></p>
+    </section>
 
-  <!-- Meet Me -->
-  <section class="meet-me">
-    <h2>Meet Me</h2>
-    <p>Hello! I’m Khushi, a playful systems thinker who believes in making messy ideas tangible. If it can be prototyped, I’ve probably tried it.</p>
-    <ul class="beliefs">
-      <li>Card games are sacred.</li>
-      <li>Curiosity &gt; credentials.</li>
-      <li>Everything is a prototype.</li>
-    </ul>
-    <div class="badges">
-      <span class="badge">🎲 Game Designer</span>
-      <span class="badge">🧠 EdTech Researcher</span>
-      <span class="badge">📨 Substack Writer</span>
-      <span class="badge">🔨 Tinkerer</span>
-    </div>
-  </section>
+    <section class="about" aria-labelledby="about-label">
+      <h2 id="about-label">about + contact</h2>
+      <p>I’m pursuing a B.S. in Mathematical Sciences &amp; Human-Computer Interaction at Carnegie Mellon University (Dean’s List), with a concentration in Operations Research &amp; Statistics and a minor in Design for Learning. Recently: Strategy &amp; Impact Intern at The Unifly Collective (edtech), Product Management Intern at Vinsol, Data Analysis RA at CMU’s OH! Lab, and Educational Game Dev Researcher at IIT Kanpur.</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:kjuneja@andrew.cmu.edu">kjuneja@andrew.cmu.edu</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/kj3010/">https://www.linkedin.com/in/kj3010/</a></li>
+      </ul>
+    </section>
+  </main>
 
-  <!-- Contact Me -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Thinking about a project? Or just vibing with the vibe? Say hi.</p>
-    <form class="contact-form">
-      <label>
-        Name
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="4" required></textarea>
-      </label>
-      <button type="submit" title="Sending this might change your life.">Submit</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="social">
-      <a href="mailto:placeholder@example.com">Email</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-    </div>
-    <p class="credits">Made with sticky notes, chai, and chaos.</p>
+    <p>Designed by Khushi. Debugged by instinct.</p>
   </footer>
 
-  <!-- You found one! There are 2 more... -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <h3 id="project-modal-title"></h3>
+      <p>Content coming next iteration.</p>
+      <button class="modal-close" data-close>Close</button>
+    </div>
+  </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Rotating titles
+    const titles = [
+      'creative technologist',
+      'product-minded researcher',
+      'learning experience designer',
+      'systems/studio thinker',
+      'data-curious builder',
+      'strategy + ops tinkerer',
+      'game-maker (analog + digital)',
+      'writer of notes and notebooks',
+      'prototype sprint runner',
+      'sometimes hardware, often html',
+      'metrics, but humane',
+      'always shipping, always revising'
+    ];
+    const rotator = document.getElementById('title-rotator');
+    let titleIndex = 0;
+    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function showTitle() {
+      rotator.classList.remove('show');
+      rotator.textContent = titles[titleIndex];
+      requestAnimationFrame(() => rotator.classList.add('show'));
+      titleIndex = (titleIndex + 1) % titles.length;
+    }
+    let rotateInterval = setInterval(showTitle, 2700);
+    showTitle();
+    rotator.addEventListener('mouseover', () => clearInterval(rotateInterval));
+    rotator.addEventListener('mouseout', () => rotateInterval = setInterval(showTitle, 2700));
+    if (prefersReduce) {
+      rotator.classList.add('no-transition');
+    }
+
+    // Vibe toggle
+    const themes = ['theme-default','theme-studio','theme-night','theme-citrus'];
+    const vibeBtn = document.getElementById('vibe-toggle');
+    let currentTheme = localStorage.getItem('theme');
+    if (themes.includes(currentTheme)) {
+      document.body.className = currentTheme;
+    } else {
+      currentTheme = 'theme-default';
+    }
+    vibeBtn.addEventListener('click', () => {
+      let idx = themes.indexOf(currentTheme);
+      idx = (idx + 1) % themes.length;
+      currentTheme = themes[idx];
+      document.body.className = currentTheme;
+      localStorage.setItem('theme', currentTheme);
+    });
+
+    // Substack randomizer
+    const posts = [
+      { title: 'Notes — latest letter', teaser: 'On learning by doing.', url: '#' },
+      { title: 'Notes — a favorite', teaser: 'Play, presence, and practice.', url: '#' },
+      { title: 'Notes — studio log', teaser: 'Fragments from the cutting room floor.', url: '#' },
+      { title: 'Notes — product scraps', teaser: 'Feature bets, tradeoffs, and tests.', url: '#' },
+      { title: 'Notes — field notes', teaser: 'People, patterns, and prototypes.', url: '#' },
+      { title: 'Notes — thinking in public', teaser: 'Working notes, not finished essays.', url: '#' }
+    ];
+    const substackContainer = document.getElementById('substack-cards');
+    const chosen = [];
+    while (chosen.length < 2) {
+      const idx = Math.floor(Math.random() * posts.length);
+      if (!chosen.includes(idx)) chosen.push(idx);
+    }
+    chosen.forEach(i => {
+      const item = posts[i];
+      const card = document.createElement('article');
+      card.className = 'substack-card';
+      card.innerHTML = `<h3>${item.title}</h3><p>${item.teaser}</p><a href="${item.url}">Read on Substack →</a>`;
+      substackContainer.appendChild(card);
+    });
+
+    // Project modals
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('project-modal-title');
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        modalTitle.textContent = card.dataset.title;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        const closeBtn = modal.querySelector('.modal-close');
+        closeBtn.focus();
+        modal.addEventListener('keydown', trapFocus);
+      });
+    });
+    function closeModal() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      modal.removeEventListener('keydown', trapFocus);
+    }
+    function trapFocus(e) {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        modal.querySelector('.modal-close').focus();
+      } else if (e.key === 'Escape') {
+        closeModal();
+      }
+    }
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    modal.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', closeModal));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+  </script>
 </body>
 </html>
