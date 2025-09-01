@@ -1,0 +1,11 @@
+{
+  "name": "Khushi Juneja Portfolio",
+  "short_name": "KJ Portfolio",
+  "icons": [
+    {"src": "/assets/favicon.svg", "sizes": "32x32", "type": "image/svg+xml"}
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
