@@ -1,195 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khushi Juneja</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<title>Khushi Juneja — Product, playful systems, learning-science</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.">
+<link rel="canonical" href="https://frazzled-kj.github.io/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta property="og:title" content="Khushi Juneja">
+<meta property="og:description" content="Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.">
+<meta property="og:image" content="/assets/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Khushi Juneja",
+  "url": "https://frazzled-kj.github.io/",
+  "sameAs": ["https://www.linkedin.com/in/kj3010/"]
+}
+</script>
 </head>
-<body class="theme-default">
-  <button id="vibe-toggle" class="vibe-toggle" aria-label="toggle vibe">✨ toggle vibe</button>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <h1>Khushi Juneja</h1>
+  <nav class="site-controls">
+    <button id="vibeBtn" class="btn">toggle vibe</button>
+  </nav>
+</header>
+<main id="main">
+<section class="hero">
+  <h2>hey there, i'm khushi.</h2>
+  <section class="dictionary" aria-labelledby="def-heading">
+    <h2 id="def-heading" class="visually-hidden">Name definition</h2>
 
-  <header class="intro">
-    <h1>hey, i’m khushi.</h1>
-    <p class="devanagari">ख़ुशी (khushi) — Hindi: happiness</p>
-    <p class="intro-line">Products, puzzles, and playful systems—built with research, rigor, and a little mischief.</p>
-    <p id="title-rotator" class="rotating-title" aria-live="polite"></p>
-  </header>
+    <div class="dict-block">
+      <h3 class="dict-devanagari">खुशी</h3>
+      <p class="dict-translit"><strong>Transliterated version:</strong> khushi.</p>
 
-  <main>
-    <section class="substack" aria-labelledby="substack-label">
-      <h2 id="substack-label" class="visually-hidden">Substack</h2>
-      <div id="substack-cards" class="substack-cards"></div>
-    </section>
+      <p class="dict-gender">स्त्रीलिंग</p>
 
-    <section class="projects-section" aria-labelledby="projects-label">
-      <h2 id="projects-label">projects</h2>
-      <div class="projects-grid">
-        <button class="project-card" data-title="Project One">
-          <span class="project-title">Project One</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Two">
-          <span class="project-title">Project Two</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Three">
-          <span class="project-title">Project Three</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Four">
-          <span class="project-title">Project Four</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Five">
-          <span class="project-title">Project Five</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Six">
-          <span class="project-title">Project Six</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Seven">
-          <span class="project-title">Project Seven</span>
-          <span class="project-open">Click to open</span>
-        </button>
-        <button class="project-card" data-title="Project Eight">
-          <span class="project-title">Project Eight</span>
-          <span class="project-open">Click to open</span>
-        </button>
-      </div>
-      <p class="view-more"><a href="playground.html">View more →</a></p>
-    </section>
+      <ol class="dict-meanings-hi">
+        <li>प्रसन्नता।</li>
+        <li>मर्ज़ी, इच्छा <span class="dict-eg">(जैसे—आपकी खुशी से मेरा काम हो जाएगा)</span>।</li>
+      </ol>
 
-    <section class="about" aria-labelledby="about-label">
-      <h2 id="about-label">about + contact</h2>
-      <p>I’m pursuing a B.S. in Mathematical Sciences &amp; Human-Computer Interaction at Carnegie Mellon University (Dean’s List), with a concentration in Operations Research &amp; Statistics and a minor in Design for Learning. Recently: Strategy &amp; Impact Intern at The Unifly Collective (edtech), Product Management Intern at Vinsol, Data Analysis RA at CMU’s OH! Lab, and Educational Game Dev Researcher at IIT Kanpur.</p>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:kjuneja@andrew.cmu.edu">kjuneja@andrew.cmu.edu</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/kj3010/">https://www.linkedin.com/in/kj3010/</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>Designed by Khushi. Debugged by instinct.</p>
-  </footer>
-
-  <div id="project-modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-      <h3 id="project-modal-title"></h3>
-      <p>Content coming next iteration.</p>
-      <button class="modal-close" data-close>Close</button>
+      <p class="dict-translate">Translate khushi to</p>
+      <h4 class="dict-lang">English</h4>
+      <ol class="dict-meanings-en">
+        <li>happiness</li>
+        <li>building products, puzzles, and playful systems with research, rigor, and a lot of coffee.</li>
+      </ol>
     </div>
+  </section>
+  <p>Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.</p>
+  <p>Product · Learning Science · HCI · OR/Stats</p>
+</section>
+<section id="musings" aria-labelledby="musings-heading">
+  <h2 id="musings-heading">Latest musings</h2>
+  <ul id="musingsList" class="musings-list" data-rotate="true"></ul>
+</section>
+<section>
+  <h2>Featured projects</h2>
+  <div id="featured-projects" class="grid projects">
+    <!-- static fallback -->
+    <article class="card"><h3>Keystone</h3><p>CBSE micro-projects generator.</p></article>
+    <article class="card"><h3>Samvaad</h3><p>philosophical debate card game.</p></article>
   </div>
-
-  <script>
-    // Rotating titles
-    const titles = [
-      'creative technologist',
-      'product-minded researcher',
-      'learning experience designer',
-      'systems/studio thinker',
-      'data-curious builder',
-      'strategy + ops tinkerer',
-      'game-maker (analog + digital)',
-      'writer of notes and notebooks',
-      'prototype sprint runner',
-      'sometimes hardware, often html',
-      'metrics, but humane',
-      'always shipping, always revising'
-    ];
-    const rotator = document.getElementById('title-rotator');
-    let titleIndex = 0;
-    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function showTitle() {
-      rotator.classList.remove('show');
-      rotator.textContent = titles[titleIndex];
-      requestAnimationFrame(() => rotator.classList.add('show'));
-      titleIndex = (titleIndex + 1) % titles.length;
-    }
-    let rotateInterval = setInterval(showTitle, 2700);
-    showTitle();
-    rotator.addEventListener('mouseover', () => clearInterval(rotateInterval));
-    rotator.addEventListener('mouseout', () => rotateInterval = setInterval(showTitle, 2700));
-    if (prefersReduce) {
-      rotator.classList.add('no-transition');
-    }
-
-    // Vibe toggle
-    const themes = ['theme-default','theme-studio','theme-night','theme-citrus'];
-    const vibeBtn = document.getElementById('vibe-toggle');
-    let currentTheme = localStorage.getItem('theme');
-    if (themes.includes(currentTheme)) {
-      document.body.className = currentTheme;
-    } else {
-      currentTheme = 'theme-default';
-    }
-    vibeBtn.addEventListener('click', () => {
-      let idx = themes.indexOf(currentTheme);
-      idx = (idx + 1) % themes.length;
-      currentTheme = themes[idx];
-      document.body.className = currentTheme;
-      localStorage.setItem('theme', currentTheme);
-    });
-
-    // Substack randomizer
-    const posts = [
-      { title: 'Notes — latest letter', teaser: 'On learning by doing.', url: '#' },
-      { title: 'Notes — a favorite', teaser: 'Play, presence, and practice.', url: '#' },
-      { title: 'Notes — studio log', teaser: 'Fragments from the cutting room floor.', url: '#' },
-      { title: 'Notes — product scraps', teaser: 'Feature bets, tradeoffs, and tests.', url: '#' },
-      { title: 'Notes — field notes', teaser: 'People, patterns, and prototypes.', url: '#' },
-      { title: 'Notes — thinking in public', teaser: 'Working notes, not finished essays.', url: '#' }
-    ];
-    const substackContainer = document.getElementById('substack-cards');
-    const chosen = [];
-    while (chosen.length < 2) {
-      const idx = Math.floor(Math.random() * posts.length);
-      if (!chosen.includes(idx)) chosen.push(idx);
-    }
-    chosen.forEach(i => {
-      const item = posts[i];
-      const card = document.createElement('article');
-      card.className = 'substack-card';
-      card.innerHTML = `<h3>${item.title}</h3><p>${item.teaser}</p><a href="${item.url}">Read on Substack →</a>`;
-      substackContainer.appendChild(card);
-    });
-
-    // Project modals
-    const modal = document.getElementById('project-modal');
-    const modalTitle = document.getElementById('project-modal-title');
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('click', () => {
-        modalTitle.textContent = card.dataset.title;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('modal-open');
-        const closeBtn = modal.querySelector('.modal-close');
-        closeBtn.focus();
-        modal.addEventListener('keydown', trapFocus);
-      });
-    });
-    function closeModal() {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('modal-open');
-      modal.removeEventListener('keydown', trapFocus);
-    }
-    function trapFocus(e) {
-      if (e.key === 'Tab') {
-        e.preventDefault();
-        modal.querySelector('.modal-close').focus();
-      } else if (e.key === 'Escape') {
-        closeModal();
-      }
-    }
-    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-    modal.querySelectorAll('[data-close]').forEach(btn => btn.addEventListener('click', closeModal));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
-  </script>
+  <p><a href="/projects/">View all projects</a></p>
+</section>
+<section id="about">
+  <h2>About</h2>
+  <p>CMU — B.S. Mathematical Sciences &amp; HCI; concentration OR/Stats; minor Design for Learning.</p>
+  <p>Recent roles: Student Partner @ The Eberly Center for Educational Innovation; Strategy &amp; Impact Intern @ The Unifly Collective; PM Intern @ Vinsol; Data Analysis RA @ OH! Lab (CMU); Educational Game Dev Researcher @ IIT Kanpur.</p>
+  <p><a class="button" href="mailto:kjuneja@andrew.cmu.edu">Email</a> <a class="button" href="https://www.linkedin.com/in/kj3010/">LinkedIn</a></p>
+</section>
+</main>
+<footer>
+  <p>&copy; <span id="year"></span> Khushi Juneja</p>
+  <p>Last updated <span id="last-updated"></span> · <a href="#">Privacy</a></p>
+</footer>
+<script src="/assets/app.js" defer></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
