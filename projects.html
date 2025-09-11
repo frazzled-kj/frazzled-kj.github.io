@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Projects — Khushi Juneja</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="hero-head">
+  <h1 class="site-title"><a href="index.html">Khushi Juneja</a></h1>
+  <button id="vibeBtn" aria-label="Toggle vibe">toggle vibe</button>
+</header>
+<main id="main">
+  <h2>All projects</h2>
+  <div class="grid projects">
+    <article class="card"><h3>Keystone</h3><p>CBSE micro-projects generator.</p></article>
+    <article class="card"><h3>Samvaad</h3><p>philosophical debate card game.</p></article>
+    <article class="card"><h3>Interim</h3><p>summer discovery program.</p></article>
+    <article class="card"><h3>Reflection Postcards</h3><p>self-paced reflection prompts.</p></article>
+    <article class="card"><h3>Inner Math Lab</h3><p>puzzle-based math explorations.</p></article>
+    <article class="card"><h3>Puzzle Court</h3><p>logic game playground.</p></article>
+  </div>
+</main>
+<footer>
+  <p>&copy; <span id="year"></span> Khushi Juneja</p>
+  <p>Last updated <span id="last-updated"></span></p>
+</footer>
+<script src="script.js" defer></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
