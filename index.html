@@ -8,7 +8,6 @@
 <link rel="canonical" href="https://frazzled-kj.github.io/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/styles.css">
-<link rel="manifest" href="/manifest.webmanifest">
 <meta property="og:title" content="Khushi Juneja">
 <meta property="og:description" content="Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.">
 <meta property="og:image" content="/assets/og.svg">
@@ -25,43 +24,48 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header>
-  <h1>Khushi Juneja</h1>
-  <nav class="site-controls">
-    <button id="vibeBtn" class="btn">toggle vibe</button>
-  </nav>
-</header>
-<main id="main">
 <section class="hero">
-  <h2>hey there, i'm khushi.</h2>
-  <section class="dictionary" aria-labelledby="def-heading">
-    <h2 id="def-heading" class="visually-hidden">Name definition</h2>
+  <header class="hero-head">
+    <h1 class="site-title">Khushi Juneja</h1>
+    <button id="vibeBtn" aria-label="Toggle vibe">toggle vibe</button>
+  </header>
 
-    <div class="dict-block">
-      <h3 class="dict-devanagari">खुशी</h3>
-      <p class="dict-translit"><strong>Transliterated version:</strong> khushi.</p>
-
-      <p class="dict-gender">स्त्रीलिंग</p>
-
-      <ol class="dict-meanings-hi">
-        <li>प्रसन्नता।</li>
-        <li>मर्ज़ी, इच्छा <span class="dict-eg">(जैसे—आपकी खुशी से मेरा काम हो जाएगा)</span>।</li>
-      </ol>
-
-      <p class="dict-translate">Translate khushi to</p>
-      <h4 class="dict-lang">English</h4>
-      <ol class="dict-meanings-en">
-        <li>happiness</li>
-        <li>building products, puzzles, and playful systems with research, rigor, and a lot of coffee.</li>
-      </ol>
-    </div>
-  </section>
-  <p>Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.</p>
-  <p>Product · Learning Science · HCI · OR/Stats</p>
+  <div class="dictionary card" role="definition">
+    <h2 class="word">खुशी</h2>
+    <p class="translit">Transliterated version: <span lang="en">khushi</span>.</p>
+    <h3 class="label">स्त्रीलिंग</h3>
+    <ol class="defs-hi">
+      <li>प्रसन्नता।</li>
+      <li>मर्ज़ी, इच्छा (जैसे—आपकी खुशी से मेरा काम हो जाएगा)।</li>
+    </ol>
+    <h3 class="label">Translate khushi to</h3>
+    <h4 class="label sub">English</h4>
+    <ol class="defs-en">
+      <li>happiness</li>
+      <li>building products, puzzles, and playful systems with research, rigor, and a lot of coffee.</li>
+    </ol>
+  </div>
+  <p class="tagline">Products, puzzles, and playful systems: built with research, rigor, and a lot of coffee.</p>
+  <p class="skills">Product · Learning Science · HCI · OR/Stats</p>
+  <aside class="hero-aside" aria-hidden="true"></aside>
 </section>
-<section id="musings" aria-labelledby="musings-heading">
-  <h2 id="musings-heading">Latest musings</h2>
-  <ul id="musingsList" class="musings-list" data-rotate="true"></ul>
+<main id="main">
+<section aria-labelledby="musings-h" class="latest">
+  <h2 id="musings-h">Latest musings</h2>
+  <div class="musings">
+    <article class="musing-card">
+      <div class="musing-meta">2025-07-31</div>
+      <a class="musing-title" href="https://recallprotocol.substack.com/p/learning-by-doing" target="_blank" rel="noopener">Learning by doing (and explaining)</a>
+    </article>
+    <article class="musing-card">
+      <div class="musing-meta">2025-07-15</div>
+      <a class="musing-title" href="https://recallprotocol.substack.com/p/presence-over-performance" target="_blank" rel="noopener">Presence over performance</a>
+    </article>
+    <article class="musing-card">
+      <div class="musing-meta">2025-06-20</div>
+      <a class="musing-title" href="https://recallprotocol.substack.com/p/adulting-101" target="_blank" rel="noopener">Designing Adulting 101</a>
+    </article>
+  </div>
 </section>
 <section>
   <h2>Featured projects</h2>
@@ -70,7 +74,6 @@
     <article class="card"><h3>Keystone</h3><p>CBSE micro-projects generator.</p></article>
     <article class="card"><h3>Samvaad</h3><p>philosophical debate card game.</p></article>
   </div>
-  <p><a href="/projects/">View all projects</a></p>
 </section>
 <section id="about">
   <h2>About</h2>
