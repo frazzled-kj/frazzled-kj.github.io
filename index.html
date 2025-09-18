@@ -51,25 +51,26 @@
     </section>
 
     <!-- Rotating Substack Posts -->
-    <section id="musings" class="section reveal" aria-labelledby="musings-title">
-      <div class="wrap stack-md">
-        <h2 id="musings-title" class="section-label">
-          Latest musings
-        </h2>
+<section id="musings" class="section reveal" aria-labelledby="musings-title">
+  <div class="wrap stack-md">
+    <h2 id="musings-title" class="section-label">
+      Latest musings <span class="muted" lang="hi">/ नवीन विचार</span>
+    </h2>
 
-        <div class="carousel card" role="region" aria-label="Latest posts carousel">
-          <div class="carousel-viewport" id="carousel-viewport" aria-live="polite">
-            <ul class="carousel-track" id="carousel-track">
-              <!-- Slides injected by script.js -->
-            </ul>
-          </div>
-          <div class="carousel-controls cluster">
-            <button type="button" class="btn" id="prev-btn" aria-label="Previous post">Prev</button>
-            <button type="button" class="btn" id="next-btn" aria-label="Next post">Next</button>
-          </div>
-        </div>
+    <div class="carousel card" role="region" aria-label="Latest posts carousel">
+      <div class="carousel-viewport" id="carousel-viewport" aria-live="polite">
+        <ul class="carousel-track" id="carousel-track">
+          <!-- Slides injected by script.js -->
+        </ul>
       </div>
-    </section>
+      <div class="carousel-controls cluster">
+        <button type="button" class="btn" id="prev-btn" aria-label="Previous post">Prev</button>
+        <button type="button" class="btn" id="next-btn" aria-label="Next post">Next</button>
+      </div>
+      <p class="muted small">This carousel reads inline JSON embedded in the page.</p>
+    </div>
+  </div>
+</section>
 
     <!-- Projects Grid (aligned to resume) -->
     <section id="projects" class="section reveal" aria-labelledby="projects-title">
@@ -211,30 +212,27 @@
   </footer>
 
   <script src="script.js" defer></script>
-  <script id="posts-data" type="application/json">
-    [
-      {
-        "title": "From notes to structured signals",
-        "date": "2025-08-22",
-        "excerpt": "How a redesigned observation protocol turned qualitative pedagogy notes into actionable data.",
-        "image": "",
-        "url": "#"
-      },
-      {
-        "title": "Building a bilingual workshop that raises funds",
-        "date": "2025-07-18",
-        "excerpt": "Design choices behind Unifly's student-facing fundraising program.",
-        "image": "",
-        "url": "#"
-      },
-      {
-        "title": "Onboarding that reduces questions by 45%",
-        "date": "2025-06-29",
-        "excerpt": "Mapping new-hire pain points and sequencing tasks for clarity.",
-        "image": "",
-        "url": "#"
-      }
-    ]
-    </script>
+<script id="posts-data" type="application/json">
+[
+  {
+    "title": "From notes to structured signals",
+    "subtitle": "Designing an observation protocol that teams actually use",
+    "excerpt": "How a redesigned observation sheet turned qualitative pedagogy notes into actionable patterns for faster course improvements.",
+    "url": "#"
+  },
+  {
+    "title": "Onboarding that reduces questions by 45%",
+    "subtitle": "Sequencing tasks for clarity on a training platform",
+    "excerpt": "Mapping new-hire pain points and reordering steps can remove ambiguity before it appears.",
+    "url": "#"
+  },
+  {
+    "title": "Building a bilingual workshop that raises funds",
+    "subtitle": "Peer accountability, capstones, and near-zero cost",
+    "excerpt": "Design choices behind a student-facing fundraising program that shipped quickly and sustained momentum.",
+    "url": "#"
+  }
+]
+</script>
 </body>
 </html>
