@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function initSwipe(el){
     let startX = 0, dx = 0, tracking = false;
     const threshold = 40;
-
     el.addEventListener('touchstart', (e) => { tracking = true; startX = e.touches[0].clientX; dx = 0; }, { passive: true });
     el.addEventListener('touchmove', (e) => { if (tracking) dx = e.touches[0].clientX - startX; }, { passive: true });
     el.addEventListener('touchend', () => {
