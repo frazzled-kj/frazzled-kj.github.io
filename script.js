@@ -1,8 +1,9 @@
 /* ===========================================================
-   Portfolio interactions – text-only musings carousel
+   Portfolio interactions – musings cards (title, optional subtitle,
+   leading 7–10 words, "Continue reading")
    - Loads posts (local file → inline JSON fallback)
    - Accessible, auto-rotating carousel (hover/keyboard/touch)
-   - Titles/links use system serif for reflective tone
+   - Titles use .serif (typewriter-like monospace stack via CSS)
    - Respects prefers-reduced-motion
    =========================================================== */
 
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(() => {
       renderSlides([{
         title: 'No posts found',
+        subtitle: '',
         date: new Date().toISOString().slice(0,10),
         excerpt: 'Add items to posts.sample.json or the inline #posts-data JSON block.',
         url: '#'
@@ -39,7 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
       initCarousel();
     });
 
-  // ===== Data loading =====
+  /* ===============================
+     Data loading
+     =============================== */
   async function loadPosts(){
     // 1) Try local JSON (may be blocked under file://)
     try {
@@ -61,14 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
     throw new Error('No posts available');
   }
 
-  // ===== UI helpers =====
+  /* ===============================
+     UI helpers
+     =============================== */
   function setFooterDates(){
     const y = document.getElementById('year');
     const lu = document.getElementById('last-updated');
     const now = new Date();
-    y.textContent = String(now.getFullYear());
-    lu.textContent = now.toISOString().slice(0,10);
-    lu.setAttribute('datetime', now.toISOString());
+    if (y) y.textContent = String(now.getFullYear());
+    if (lu){
+      lu.textContent = now.toISOString().slice(0,10);
+      lu.setAttribute('datetime', now.toISOString());
+    }
   }
 
   function initReveal(reduced){
@@ -87,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   }
 
+  /* ===============================
+     Rendering – text-only slides
+     =============================== */
   function renderSlides(posts, container){
     container.innerHTML = '';
     posts.forEach((p, i) => {
@@ -99,40 +110,60 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = document.createElement('div');
       body.className = 'slide-body stack-xs';
 
-      const date = document.createElement('div');
-      date.className = 'post-date';
-      date.textContent = toFriendlyDate(p.date);
-
+      // Title (single heading, linked)
       const h3 = document.createElement('h3');
       const titleLink = document.createElement('a');
       titleLink.href = p.url || '#';
-      titleLink.className = 'link serif';          // reflective serif for title/link
-      titleLink.textContent = p.title;
+      titleLink.className = 'link serif';   // reflective/“typewriter” tone via CSS
+      titleLink.textContent = p.title || 'Untitled';
+      titleLink.setAttribute('aria-label', `Open post: ${p.title || 'Untitled'}`);
       h3.appendChild(titleLink);
+      body.appendChild(h3);
 
-      const ex = document.createElement('p');
-      ex.textContent = p.excerpt || '';
+      // Optional subtitle
+      if (p.subtitle && String(p.subtitle).trim().length){
+        const sub = document.createElement('p');
+        sub.className = 'muted small';
+        sub.textContent = String(p.subtitle).trim();
+        body.appendChild(sub);
+      }
 
-      // Optional separate "Read" link if you want both:
-      // const read = document.createElement('a');
-      // read.href = p.url || '#';
-      // read.className = 'link serif';
-      // read.textContent = 'Read';
+      // Preview = leading sentence → first 7–10 words + …
+      const preview = document.createElement('p');
+      preview.textContent = makePreview(p.excerpt || p.title || '', 7, 10);
+      body.appendChild(preview);
 
-      body.append(date, h3, ex /*, read*/);
+      // Continue link
+      const read = document.createElement('a');
+      read.href = p.url || '#';
+      read.className = 'link';
+      read.textContent = 'Continue reading';
+      read.setAttribute('aria-label', `Continue reading: ${p.title || 'post'}`);
+      body.appendChild(read);
+
       li.append(body);
       container.appendChild(li);
     });
   }
 
-  function toFriendlyDate(iso){
-    if(!iso) return '';
-    const d = new Date(iso);
-    const fmt = new Intl.DateTimeFormat(undefined, { year:'numeric', month:'short', day:'2-digit' });
-    return fmt.format(d);
+  function makePreview(text, minWords = 7, maxWords = 10){
+    if (!text) return '';
+    // Get leading sentence (split on . ! ? or line break)
+    const sentence = String(text)
+      .replace(/\s+/g, ' ')
+      .trim()
+      .split(/(?<=[\.!\?])\s+|\n+/)[0] || text;
+
+    const words = sentence.split(' ').filter(Boolean);
+    const count = Math.min(Math.max(minWords, Math.min(words.length, maxWords)), words.length);
+    const snippet = words.slice(0, count).join(' ');
+    // Add ellipsis only if we truncated
+    return (count < words.length) ? `${snippet}…` : `${snippet}`;
   }
 
-  // ===== Carousel =====
+  /* ===============================
+     Carousel
+     =============================== */
   function initCarousel(){
     let slidesCount = document.getElementById('carousel-track').children.length || 1;
     index = 0;
@@ -156,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initSwipe(viewport);
 
-    // In case dynamic content changes count later
+    // Update if slide count changes
     const mo = new MutationObserver(() => {
       slidesCount = document.getElementById('carousel-track').children.length || 1;
       index = Math.min(index, slidesCount - 1);
