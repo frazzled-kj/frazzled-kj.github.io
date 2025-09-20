@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = postsArr.length ? postsArr : [{
       title: 'No posts yet',
       subtitle: '',
-      excerpt: 'Add items to the #posts-data inline JSON block to populate this carousel.',
+      excerpt: ' ',
       url: '#'
     }];
 
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function makePreview(text, minWords = 7, maxWords = 10){
+  function makePreview(text, minWords = 15, maxWords = 25){
     if (!text) return '';
     const sentence = String(text).replace(/\s+/g, ' ').trim().split(/(?<=[\.!\?])\s+|\n+/)[0] || text;
     const words = sentence.split(' ').filter(Boolean);
