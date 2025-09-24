@@ -143,7 +143,7 @@ small { font-size: .875rem; }
   padding: clamp(1rem,.9rem + 1vw,1.6rem);
   min-height: clamp(160px, 120px + 6vw, 240px);
   border-left: 4px solid var(--accent);
-   padding-left: calc(var(--space-lg) + 0.5rem);
+   padding-left: 10px;
 }
 .slide h3{ margin: 0; font-size: clamp(1.05rem,.9rem + .8vw,1.35rem); line-height: 1.3; }
 .slide h3 a{ color: var(--text); border-bottom: 2px solid transparent; }
