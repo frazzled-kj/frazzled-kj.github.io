@@ -138,11 +138,11 @@ small { font-size: .875rem; }
 .carousel li{ padding: 0; }
 
 .slide{
-  display: grid; grid-template-columns: 1fr;
-  gap: var(--space-sm);
-  padding: clamp(1rem,.9rem + 1vw,1.6rem);
-  min-height: clamp(160px, 120px + 6vw, 240px);
-  border-left: 4px solid var(--accent);
+   display: grid; grid-template-columns: 1fr;
+   gap: var(--space-sm);
+   padding: clamp(1rem,.9rem + 1vw,1.6rem);
+   min-height: clamp(160px, 120px + 6vw, 240px);
+   border-left: 4px solid var(--accent);
    padding-left: 10px;
 }
 .slide h3{ margin: 0; font-size: clamp(1.05rem,.9rem + .8vw,1.35rem); line-height: 1.3; }
